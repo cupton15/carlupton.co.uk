@@ -2,12 +2,11 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+import styles from './header.module.css'
+
 const Header = ({ siteTitle }) => (
   <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
+    className={styles.header}
   >
     <div
       style={{
@@ -25,6 +24,10 @@ const Header = ({ siteTitle }) => (
           }}
         >
           {siteTitle}
+        </Link>
+        <Link
+          to="/work-history/">
+            Work history
         </Link>
       </h1>
     </div>

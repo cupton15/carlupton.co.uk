@@ -1,0 +1,25 @@
+.timeline {
+    height: 1000px;
+    width: 500px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline:before {
+    content: "";
+    border-left: red 4px solid;
+    display: block;
+    height: 100%;
+    position: absolute;
+    left: calc(50% - 2px);
+}
+
+.timeline > div {
+   height: 200px;
+   width: calc(50% - 2px);
+}
+
+.timeline > div:nth-child(even) {
+    align-self: flex-end;
+}
